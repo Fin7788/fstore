@@ -1,0 +1,66 @@
+.menuW {
+  background-color: #f6f9fc;
+
+  .mCardW {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .mCard {
+      flex-basis: calc(100% - 30px);
+      border: thin solid rgba(0, 0, 0, 0.12);
+      border-radius: 10px;
+      margin: 15px;
+      text-decoration: none;
+      color: inherit;
+
+      .imageContainer {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .caption {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+
+        span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    @media (min-width: 600px) {
+      .mCard {
+        flex: 0 0 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+      }
+    }
+
+    @media (min-width: 960px) {
+      .mCard {
+        flex: 0 0 calc(33.3333333333% - 30px);
+        max-width: calc(33.3333333333% - 30px);
+      }
+    }
+
+    @media (min-width: 1264px) {
+      .mCard {
+        flex: 0 0 calc(25% - 30px);
+        max-width: calc(25% - 30px);
+      }
+    }
+  }
+}
