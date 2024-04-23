@@ -4,7 +4,7 @@ import Italian from "@/assets/images/area/Italian.png";
 import Chinesse from "@/assets/images/area/Chinesse.png";
 import Japanese from "@/assets/images/area/Japanesse.png";
 import Indian from "@/assets/images/area/Indian.png";
-import ThaiFood from "@/assets/images/area/ThaiFood.png";
+import ThaiFood from "@/assets/images/area/Italian.png";
 import Mexican from "@/assets/images/area/Mexican.png";
 
 export default defineComponent({

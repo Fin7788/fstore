@@ -1,0 +1,81 @@
+.grayw {
+  background-color: #f6f9fc;
+  padding-top: 2%;
+  .mw {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    div:first-child {
+      margin-right: 16px;
+    }
+  }
+
+  .minfo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 18px;
+      color: #757575;
+    }
+    .emailS {
+      height: 40px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 10px;
+      border: thin solid #ccc;
+      margin-bottom: 64px;
+
+      input,
+      button {
+        height: 40px;
+        margin: 0;
+      }
+
+      input {
+        all: unset;
+        flex-grow: 1;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        padding: 12px;
+      }
+
+      button {
+        width: 100px;
+        all: unset;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        color: #fff;
+        background-color: #d23f57;
+        padding: 8px;
+      }
+    }
+    div {
+      h6 {
+        margin-bottom: 12px;
+      }
+    }
+    .apps {
+      display: flex;
+      div:first-child {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 720px) {
+  .grayw {
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .grayw {
+    height: 60vh;
+  }
+}

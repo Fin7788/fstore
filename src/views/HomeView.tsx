@@ -7,9 +7,12 @@ import MenuCard from "@/components/MenuCard";
 import Collections from "@/components/Collections";
 import BBC from "@/components/BBC";
 import PNY from "@/components/PNY";
+import Mobile from "@/components/Mobile"
+import Poploc from "@/components/Poploc"
+
+// import HelloWorld from "@/components/HelloWorld.vue"
 import "@/assets/sass/_main.scss";
 
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default defineComponent({
   name: "Home",
@@ -22,7 +25,9 @@ export default defineComponent({
     Collections,
     BBC,
     PNY,
-    HelloWorld,
+    Mobile,
+    Poploc,
+    // HelloWorld,
   },
   setup() {
     const isHeaderVisible = ref(false);
@@ -54,7 +59,8 @@ export default defineComponent({
         <Collections/>
         <BBC />
         <PNY />
-        {/* <RouterLink to="/Resturant"> aaa</RouterLink> */}
+        <Mobile/>
+        <Poploc/>
       </>
     );
   },
