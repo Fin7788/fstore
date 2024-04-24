@@ -12,7 +12,7 @@ export default defineComponent({
         return () => (
             <div class="grayw">
                 <div class="mw">
-                    <div>
+                    <div class="moimg">
                         <img src={m1} alt="" />
                     </div>
                     <div class="minfo">

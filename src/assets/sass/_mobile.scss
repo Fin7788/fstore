@@ -1,6 +1,6 @@
 .grayw {
   background-color: #f6f9fc;
-  padding-top: 2%;
+  padding: 5% 0;
   .mw {
     margin: 0 auto;
     display: flex;
@@ -78,13 +78,20 @@
     }
   }
 }
-@media screen and (min-width: 720px) {
+@media (min-width: 600px) {
   .grayw {
-    height: 100vh;
+    // height: 100vh;
+    .mw{
+      display: block;
+    }
   }
 }
+
 @media screen and (min-width: 1240px) {
   .grayw {
-    height: 60vh;
+    .mw{
+      display: flex;
+    }
   }
 }
+

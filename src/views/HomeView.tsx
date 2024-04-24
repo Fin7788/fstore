@@ -10,6 +10,7 @@ import PNY from "@/components/PNY";
 import Mobile from "@/components/Mobile"
 import Poploc from "@/components/Poploc"
 import Footer from "@/components/Footer"
+import Navbar from "@/components/Navbar"
 
 // import HelloWorld from "@/components/HelloWorld.vue"
 import "@/assets/sass/_main.scss";
@@ -29,6 +30,7 @@ export default defineComponent({
     Mobile,
     Poploc,
     Footer,
+    Navbar,
     // HelloWorld,
   },
   setup() {
@@ -64,6 +66,7 @@ export default defineComponent({
         <Mobile/>
         <Poploc/>
         <Footer/>
+        <Navbar/>
       </>
     );
   },

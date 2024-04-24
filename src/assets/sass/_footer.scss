@@ -1,10 +1,10 @@
 .fw {
     display: flex;
+    flex-wrap: wrap;
     color: #4b566b;
     font-weight: 300;
     .fc {
-      width: 25%;
-      // 這邊想做min-width: 1440
+      width: 100%;
       line-height: 1.5;
       padding-right: 10px;
       h2 {
@@ -12,19 +12,32 @@
       }
       h5 {
         font-weight: 300;
-        word-wrap: break-word;  // 添加此行
+        word-wrap: break-word;
       }
       .mi{
         white-space: nowrap;
         img {
             margin-top: 30px;
-            width: 140px;
+            width: 120px;
           }
           :first-child {
             margin-right: 15px;
           }
       }
-      
+    }
+    @media (min-width: 730px) {
+      .fc {
+        width: 50%;
+      }
+    }
+    
+    @media (min-width: 1264px) {
+      .fc {
+        width: 25%;
+        img{
+          width: 50%;
+        }
+      }
     }
   
     .cr {
@@ -41,7 +54,7 @@
     
   
     button {
-      white-space: nowrap;  // 添加此行
+      white-space: nowrap;
       background: none;
       color: inherit;
       border: none;
