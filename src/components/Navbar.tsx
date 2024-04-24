@@ -12,6 +12,7 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    onUpdateIsOpen: Function,
   },
 
   setup(props,{emit}) {
@@ -53,7 +54,9 @@ export default defineComponent({
       isNavbarVisible.value = false;
       emit('updateIsOpen', false);
       console.log(isNavbarVisible.value)
-
+    };
+    const stopPropagation = (event:any) => {
+      event.stopPropagation();
     };
     return {
       navto,
@@ -62,9 +65,13 @@ export default defineComponent({
       closeNavbar,
       props,
       isNavbarVisible,
+      stopPropagation,
     };
   },
   render() {
+    if (!this.props.isOpen) {
+      return null;
+    }
     if (this.props.isOpen) {
       return (
         <div class={["overlay", { "overlay-show": this.props.isOpen }]} onClick={this.closeNavbar}>
@@ -73,13 +80,13 @@ export default defineComponent({
               "navw",
               { "navbar-hidden": !this.props.isOpen },
             ]}
+            onClick={this.stopPropagation} 
           >
             <div class="nav">
               <h5>Navbar</h5>
               <button onClick={this.closeNavbar}>
                 <i class="fa-solid fa-x"></i>
               </button>
-              {/* 上方的按鈕點了不會自己關掉 */}
             </div>
             {this.navto.map((menu, index) => (
               <div>

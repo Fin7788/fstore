@@ -12,7 +12,6 @@ import Poploc from "@/components/Poploc";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
-// import HelloWorld from "@/components/HelloWorld.vue"
 import "@/assets/sass/_main.scss";
 
 export default defineComponent({
@@ -76,7 +75,7 @@ export default defineComponent({
         <Footer />
         <Navbar
           isOpen={this.isNavbarOpen}
-          onUpdate-wo={(value: boolean) => {
+          onUpdateIsOpen={(value: boolean) => {
             console.log("Received value from Navbar:", value);
             this.isNavbarOpen = value;
           }}
