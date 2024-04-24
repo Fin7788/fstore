@@ -9,6 +9,7 @@ import BBC from "@/components/BBC";
 import PNY from "@/components/PNY";
 import Mobile from "@/components/Mobile"
 import Poploc from "@/components/Poploc"
+import Footer from "@/components/Footer"
 
 // import HelloWorld from "@/components/HelloWorld.vue"
 import "@/assets/sass/_main.scss";
@@ -27,6 +28,7 @@ export default defineComponent({
     PNY,
     Mobile,
     Poploc,
+    Footer,
     // HelloWorld,
   },
   setup() {
@@ -61,6 +63,7 @@ export default defineComponent({
         <PNY />
         <Mobile/>
         <Poploc/>
+        <Footer/>
       </>
     );
   },

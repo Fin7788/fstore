@@ -1,0 +1,66 @@
+.fw {
+    display: flex;
+    color: #4b566b;
+    font-weight: 300;
+    .fc {
+      width: 25%;
+      // 這邊想做min-width: 1440
+      line-height: 1.5;
+      padding-right: 10px;
+      h2 {
+        margin-bottom: 20px;
+      }
+      h5 {
+        font-weight: 300;
+        word-wrap: break-word;  // 添加此行
+      }
+      .mi{
+        white-space: nowrap;
+        img {
+            margin-top: 30px;
+            width: 140px;
+          }
+          :first-child {
+            margin-right: 15px;
+          }
+      }
+      
+    }
+  
+    .cr {
+      font-size: inherit;
+      color: inherit;
+      display: block;
+      margin-bottom: 12px;
+      .fl {
+        width: 48px;
+        height: 48px;
+      }
+    }
+    
+    
+  
+    button {
+      white-space: nowrap;  // 添加此行
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      position: relative;
+      margin-right: 5px;
+      margin-top: 30px;
+      div {
+        width: 32px;
+        height: 32px;
+        color: white;
+        background-color: #0f3460;
+        border-radius: 50%;
+        box-sizing: border-box;
+        box-shadow: -1px 1px 6px 0px #0f3460;
+        padding-top: 5px;
+      }
+    }
+  }

@@ -1,0 +1,47 @@
+.headerWrap {
+  padding: 0 7.5%;
+}
+
+@media (min-width: 600px) {
+  .headerWrap {
+    padding: 0 5%;
+  }
+}
+
+@media (min-width: 730px) {
+  .headerWrap {
+    padding: 0 12.5%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .headerWrap {
+    padding: 0 10%;
+  }
+}
+
+.bw,
+.mCardW,
+.collectW,
+.mw {
+  width: 85%;
+}
+
+@media (min-width: 600px) {
+  .bw,
+  .mCardW,
+  .collectW,
+  .mw {
+    width: 85%;
+  }
+}
+
+
+@media (min-width: 1300px) {
+  .bw,
+  .mCardW,
+  .collectW,
+  .mw {
+    width: 80%;
+  }
+}
