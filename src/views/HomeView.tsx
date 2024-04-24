@@ -7,14 +7,13 @@ import MenuCard from "@/components/MenuCard";
 import Collections from "@/components/Collections";
 import BBC from "@/components/BBC";
 import PNY from "@/components/PNY";
-import Mobile from "@/components/Mobile"
-import Poploc from "@/components/Poploc"
-import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
+import Mobile from "@/components/Mobile";
+import Poploc from "@/components/Poploc";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 // import HelloWorld from "@/components/HelloWorld.vue"
 import "@/assets/sass/_main.scss";
-
 
 export default defineComponent({
   name: "Home",
@@ -35,9 +34,13 @@ export default defineComponent({
   },
   setup() {
     const isHeaderVisible = ref(false);
+    const isNavbarOpen = ref(false);
 
     const checkScroll = () => {
       isHeaderVisible.value = window.scrollY > window.innerHeight / 2;
+    };
+    const toggleNavbar = () => {
+      isNavbarOpen.value = !isNavbarOpen.value;
     };
 
     onMounted(() => {
@@ -51,22 +54,33 @@ export default defineComponent({
 
     return {
       isHeaderVisible,
+      isNavbarOpen,
+      toggleNavbar,
     };
   },
   render() {
     return (
       <>
-        <Header />
-        <HeaderWhite show={this.isHeaderVisible} />
+        <Header onToggle-navbar={this.toggleNavbar} />
+        <HeaderWhite
+          show={this.isHeaderVisible}
+          onToggle-navbar={this.toggleNavbar}
+        />
         <Banner />
-        <MenuCard/>
-        <Collections/>
+        <MenuCard />
+        <Collections />
         <BBC />
         <PNY />
-        <Mobile/>
-        <Poploc/>
-        <Footer/>
-        <Navbar/>
+        <Mobile />
+        <Poploc />
+        <Footer />
+        <Navbar
+          isOpen={this.isNavbarOpen}
+          onUpdate-wo={(value: boolean) => {
+            console.log("Received value from Navbar:", value);
+            this.isNavbarOpen = value;
+          }}
+        />
       </>
     );
   },

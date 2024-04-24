@@ -9,7 +9,11 @@ export default defineComponent({
       default: true,
     },
   },
-  setup() {
+  setup(props, { emit }) {
+    const onToggleNavbar = () => {
+      emit("toggle-navbar");
+    };
+
     return () => (
       <div class="headerWrap">
         <div class="flogo">
@@ -24,11 +28,11 @@ export default defineComponent({
             <i class="fa-solid fa-cart-shopping"></i>
             <div class="number">( 8 )</div>
           </div>
-          <div class="hamburger">
+          <button class="hamburger" onClick={onToggleNavbar}>
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
-          </div>
+          </button>
         </div>
       </div>
     );

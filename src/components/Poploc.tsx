@@ -31,7 +31,6 @@ export default defineComponent({
     ];
     const isFifthElement = (index: any) => {
       const result = (index + 1) % 5 === 0;
-      console.log(`Index ${index} is the fifth element: ${result}`);
       return result;
     };
 

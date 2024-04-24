@@ -10,7 +10,10 @@ export default defineComponent({
       default: true,
     },
   },
-  setup(props) {
+  setup(props, { emit }) {
+    const onToggleNavbar = () => {
+      emit("toggle-navbar");
+    };
     const atTop = ref(true);
 
     const checkScroll = () => {
@@ -46,11 +49,11 @@ export default defineComponent({
                 <i class="fa-solid fa-cart-shopping"></i>{" "}
                 <div class="number">( 8 )</div>
               </div>
-              <div class="hamburger">
+              <button class="hamburger" onClick={onToggleNavbar}>
                 <div class="line lineW"></div>
                 <div class="line lineW"></div>
                 <div class="line lineW"></div>
-              </div>
+              </button>
             </div>
           </div>
         );
