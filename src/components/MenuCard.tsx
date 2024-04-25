@@ -8,7 +8,7 @@ export default function MenuCard() {
   return (
     <div class="menuW">
       <div class="mCardW">
-        <RouterLink to="/Resturant" class="mCard">
+        <RouterLink to="/Resturant/FoodMenu" class="mCard">
           <div class="imageContainer">
             <img src={sa} alt="" />
           </div>
@@ -35,7 +35,7 @@ export default function MenuCard() {
           </div>
         </RouterLink>
 
-        <RouterLink to="/Resturant/FoodMenu" class="mCard">
+        <RouterLink to="/Resturant/ResturantTwoColumn" class="mCard">
           <div class="imageContainer">
             <img src={buger} alt="" />
           </div>

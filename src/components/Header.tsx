@@ -1,5 +1,6 @@
 import { defineComponent } from "vue";
 import flogo from "@/assets/images/flogo.png";
+import { RouterLink } from "vue-router";
 
 export default defineComponent({
   name: "Header",
@@ -9,16 +10,16 @@ export default defineComponent({
       default: true,
     },
   },
-  setup(props, { emit }) {
+  setup(_, { emit }) {
     const onToggleNavbar = () => {
       emit("toggle-navbar");
     };
 
     return () => (
       <div class="headerWrap">
-        <div class="flogo">
-          <img src={flogo} alt="" />
-        </div>
+         <RouterLink to="/" class="flogo">
+              <img src={flogo} alt="" />
+            </RouterLink>
         <div class="user">
           <div class="account">
             <i class="fa-regular fa-circle-user"></i>

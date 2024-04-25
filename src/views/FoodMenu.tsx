@@ -11,8 +11,7 @@ export default defineComponent({
   setup() {
     return() => (
       <>
-        <HeaderWhite />
-        <h1>AAAAA</h1>
+        <h1>FoodMenu</h1>
       </>
     );
   },

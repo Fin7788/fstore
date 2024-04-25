@@ -11,8 +11,7 @@ export default defineComponent({
   setup() {
     return() => (
       <>
-        <RouterLink to="/">AAAA</RouterLink>
-        <h1>AAAAA</h1>
+        <h1>ResturantTwoColumn</h1>
       </>
     );
   },
